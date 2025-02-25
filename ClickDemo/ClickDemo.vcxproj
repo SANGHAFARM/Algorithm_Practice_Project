@@ -185,19 +185,27 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Actor\Fence.cpp" />
+    <ClCompile Include="Actor\Item.cpp" />
     <ClCompile Include="Actor\Player.cpp" />
-    <ClCompile Include="Actor\Start.cpp" />
+    <ClCompile Include="Actor\Goal.cpp" />
     <ClCompile Include="Algorithm\AStar.cpp" />
+    <ClCompile Include="Actor\Enemy.cpp" />
+    <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="Level\DemoLevel.cpp" />
+    <ClCompile Include="Level\MenuLevel.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor\Fence.h" />
+    <ClInclude Include="Actor\Item.h" />
     <ClInclude Include="Actor\Player.h" />
-    <ClInclude Include="Actor\Start.h" />
+    <ClInclude Include="Actor\Goal.h" />
     <ClInclude Include="Algorithm\AStar.h" />
+    <ClInclude Include="Actor\Enemy.h" />
+    <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Level\DemoLevel.h" />
     <ClInclude Include="Algorithm\Node.h" />
+    <ClInclude Include="Level\MenuLevel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

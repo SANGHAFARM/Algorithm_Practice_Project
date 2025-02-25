@@ -1,4 +1,4 @@
-#include "Engine/Engine.h"
+#include "Game/Game.h"
 #include "Level/DemoLevel.h"
 
 int main()
@@ -6,7 +6,7 @@ int main()
 	// 메모리 누수 확인
 	CheckMemoryLeak();
 
-	Engine engine;
-	engine.LoadLevel(new DemoLevel());
-	engine.Run();
+	Game game;
+	game.LoadLevel(new DemoLevel());
+	game.Run();
 }
