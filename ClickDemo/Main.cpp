@@ -7,6 +7,6 @@ int main()
 	CheckMemoryLeak();
 
 	Game game;
-	game.LoadLevel(new DemoLevel());
+	game.Get().ToggleMenu();
 	game.Run();
 }

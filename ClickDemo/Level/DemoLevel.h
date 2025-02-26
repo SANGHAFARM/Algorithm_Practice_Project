@@ -19,13 +19,13 @@ class DemoLevel : public Level
 	RTTI_DECLARATIONS(DemoLevel, Level)
 
 public:
-	DemoLevel();
+	DemoLevel(int map);
 
 	virtual void Update(float deltaTime) override;
 
 private:
 	// 텍스트 파일로 저장된 값을 불러와서 fenceMap에 저장
-	void LoadMap();
+	void LoadMap(int map);
 
 	// fenceMap에 저장된 내용을 바탕으로 맵 그리기
 	void InitializeMap();

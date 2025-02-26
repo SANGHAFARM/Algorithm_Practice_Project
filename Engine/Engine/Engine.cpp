@@ -156,13 +156,14 @@ void Engine::LoadLevel(Level* newLevel)
 	if (mainLevel)
 	{
 		delete mainLevel;
-		system("cls");
+		ClearImageBuffer();
+		//system("cls");
 		mainLevel = newLevel;
 
 		// 마우스/윈도우 이벤트 활성화.
-		static HANDLE inputHandle = GetStdHandle(STD_INPUT_HANDLE);
-		static int flag = ENABLE_WINDOW_INPUT | ENABLE_MOUSE_INPUT | ENABLE_PROCESSED_INPUT | ENABLE_EXTENDED_FLAGS;
-		SetConsoleMode(inputHandle, flag);
+		//static HANDLE inputHandle = GetStdHandle(STD_INPUT_HANDLE);
+		//static int flag = ENABLE_WINDOW_INPUT | ENABLE_MOUSE_INPUT | ENABLE_PROCESSED_INPUT | ENABLE_EXTENDED_FLAGS;
+		//SetConsoleMode(inputHandle, flag);
 
 		return;
 	}

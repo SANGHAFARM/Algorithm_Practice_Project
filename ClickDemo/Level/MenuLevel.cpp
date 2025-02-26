@@ -4,9 +4,13 @@
 
 MenuLevel::MenuLevel()
 {
-	menuItems.PushBack(new MenuItem("Restart Game", []() {
+	menuItems.PushBack(new MenuItem("Stage 1", []() {
 		Game::Get().ToggleMenu();
-		Game::Get().LoadLevel(new DemoLevel()); })
+		Game::Get().LoadLevel(new DemoLevel(1)); })
+	);
+	menuItems.PushBack(new MenuItem("Stage 2", []() {
+		Game::Get().ToggleMenu();
+		Game::Get().LoadLevel(new DemoLevel(2)); })
 	);
 	menuItems.PushBack(new MenuItem("Quit Game", []() { Game::Get().QuitGame(); }));
 	length = menuItems.Size();

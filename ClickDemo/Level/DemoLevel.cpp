@@ -12,9 +12,9 @@
 #include "Algorithm/Node.h"
 #include "Algorithm/AStar.h"
 
-DemoLevel::DemoLevel()
+DemoLevel::DemoLevel(int map)
 {
-	LoadMap();
+	LoadMap(map);
 
 	InitializeMap();
 
@@ -53,10 +53,18 @@ void DemoLevel::Update(float deltaTime)
 	ProcessCollisionPlayerAndGoal();
 }
 
-void DemoLevel::LoadMap()
+void DemoLevel::LoadMap(int map)
 {
 	FILE* file = nullptr;
-	fopen_s(&file, "../Assets/Map.txt", "rt");
+
+	if (map == 1)
+	{
+		fopen_s(&file, "../Assets/Map1.txt", "rt");
+	}
+	else if (map == 2)
+	{
+		fopen_s(&file, "../Assets/Map2.txt", "rt");
+	}	
 
 	if (file)
 	{
