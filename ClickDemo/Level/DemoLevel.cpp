@@ -191,10 +191,15 @@ void DemoLevel::SpawnEnemies(int enemyCount)
 		int randX = Random(1, Engine::screenSize.x - 2);
 		int randY = Random(1, Engine::screenSize.y - 2);
 
+		if (player->Position().x == randX || player->Position().y == randY)
+		{
+			continue;
+		}
+
 		bool flag = false;
 		for (int i = 0; i < enemies.size(); i++)
 		{
-			if (enemies[i]->Position() == Vector2(randX, randY))
+			if (enemies[i]->Position().x == randX || enemies[i]->Position().y == randY)
 			{
 				flag = true;
 				break;
